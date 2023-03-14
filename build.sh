@@ -33,6 +33,6 @@ make
 make install
 
 # copy module to module directory
-cp objs/ngx_http_vhost_traffic_status_module.so /module/.
+cp objs/ngx_http_geoip2_module.so /module/.
 
 exit 0
