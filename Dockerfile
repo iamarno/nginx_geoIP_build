@@ -1,5 +1,5 @@
 # use aws linux
-FROM amazonlinux:devel
+FROM --platform=amd64 amazonlinux:devel
 
 # copy stuff
 COPY build.sh /root/
