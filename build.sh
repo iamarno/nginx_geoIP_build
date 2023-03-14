@@ -5,6 +5,16 @@
 nginx_version="1.23.1"
 module_version="3.4"
 
+# install libmaxminddb
+echo "install libmaxminddb dependency"
+git clone --recursive https://github.com/maxmind/libmaxminddb
+cd libmaxminddb
+./bootstrap
+./configure
+make
+make install
+cd ..
+
 # build nginx module
 echo "build with nginx version $nginx_version"
 
