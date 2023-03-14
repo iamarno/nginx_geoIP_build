@@ -34,7 +34,7 @@ tar xfv $module_version.tar.gz
 cd nginx-$nginx_version
 
 # ./configure
-./configure --add-dynamic-module=../ngx_http_geoip2_module-$module_version/
+./configure --with-compat --add-dynamic-module=../ngx_http_geoip2_module-$module_version/
 #./configure --with-compat --add-dynamic-module=../ngx_http_geoip2_module-$module_version/ --with-cc-opt=-Wno-stringop-overread
 
 # make
