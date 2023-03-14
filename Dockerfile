@@ -1,5 +1,5 @@
 # use aws linux
-FROM --platform=amd64 amazonlinux:devel
+FROM --platform=amd64 quay.io/centos/centos:stream9
 
 # copy stuff
 COPY build.sh /root/
