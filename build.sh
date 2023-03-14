@@ -18,7 +18,7 @@ tar xfv nginx-$nginx_version.tar.gz
 wget https://github.com/leev/ngx_http_geoip2_module/archive/refs/tags/$module_version.tar.gz
 
 # extract
-tar xfv v$module_version.tar.gz
+tar xfv ngx_http_geoip2_module-$module_version.tar.gz
 
 # cd
 cd nginx-$nginx_version
