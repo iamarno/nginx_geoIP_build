@@ -1,13 +1,12 @@
-# use aws linux
-FROM --platform=amd64 ubuntu:jammy
+# use centos linux
+FROM --platform=amd64 quay.io/centos/centos:stream9
 
 # copy stuff
 COPY build.sh /root/
 
 # install stuff
-RUN apt update
-#zlib1g-dev perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel libmaxminddb gd gd-devel
-RUN apt install -q -y git wget build-essential libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev libgd-dev libxml2 libxml2-dev uuid-dev
+RUN yum install -q -y git wget zlib-devel perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel libmaxminddb gd gd-devel
+RUN yum groups -q -y install "Development Tools"
 
 # the end
 CMD ["sh", "/root/build.sh"]
