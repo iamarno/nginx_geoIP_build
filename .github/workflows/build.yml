@@ -30,7 +30,7 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: ngx_http_geoip2_module.so
-        path: /home/runner/module/ngx_http_geoip2_module.so
+        name: ngx_http_geoip_module.so
+        path: /home/runner/module/ngx_http_geoip_module.so
         retention-days: 5
         if-no-files-found: error
